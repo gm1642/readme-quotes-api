@@ -1,7 +1,10 @@
 // api/quote.js
 
+// api/quote.js
+
 export default function handler(req, res) {
-  const quotes = ["Turns out the timeout wasn't a bug — it was a missing pull-up resistor and my ego.",
+  const quotes = [
+    "Turns out the timeout wasn't a bug — it was a missing pull-up resistor and my ego.",
     "It's not a memory leak. It's an unscheduled hardware reset feature.",
     "Edge AI: Where your neural network has to survive on 256KB of RAM.",
     "Step 1: add a 100nF decoupling cap. Step 2: pray. Step 3: there is no step 3.",
@@ -21,10 +24,11 @@ export default function handler(req, res) {
   // Create an SVG image string
   // Note: We use standard <text> elements because GitHub's image proxy blocks complex HTML/foreignObjects
   const svg = `
-  <svg width="700" height="120" xmlns="http://www.w3.org/2000/svg">
+  <svg width="700" height="100" xmlns="http://www.w3.org/2000/svg">
     <rect width="100%" height="100%" fill="#0d1117" rx="8" />
-    <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-style="italic">
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-style="italic">
       "${randomQuote}"
+    </text>
   </svg>
   `;
 
@@ -35,4 +39,5 @@ export default function handler(req, res) {
   // Send the image
   res.status(200).send(svg);
 }
+
 // git add . git commit -m "Describe what you changed here"  git push origin main  
