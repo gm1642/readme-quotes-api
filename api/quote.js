@@ -1,14 +1,19 @@
 // api/quote.js
 
 export default function handler(req, res) {
-  const quotes = [
-    "Oh, that timeout is due to missing pullup resistors gosh!",
-    "It’s not a memory leak, it’s a surprise hardware reset feature.",
+  const quotes = ["Turns out the timeout wasn't a bug — it was a missing pull-up resistor and my ego.",
+    "It's not a memory leak. It's an unscheduled hardware reset feature.",
     "Edge AI: Where your neural network has to survive on 256KB of RAM.",
-    "Just add a 100nF decoupling capacitor and hope for the best.",
+    "Step 1: add a 100nF decoupling cap. Step 2: pray. Step 3: there is no step 3.",
     "If it compiles on the first try, you definitely flashed the wrong board.",
     "90% of embedded engineering is just blaming the I2C bus.",
-    "Yes, I do have a favorite ground pin."
+    "Yes, I have a favorite ground pin. No, I will not be taking questions.",
+    "My code doesn't have bugs, it has undocumented hardware-software collaboration.",
+    "Sensor fusion: where two unreliable sensors team up to produce one confidently wrong answer.",
+    "Power optimization is just removing things until the battery stops apologizing.",
+    "The bootloader worked on Tuesday. It is no longer Tuesday.",
+    "I've debugged enough race conditions to know the race condition always wins.",
+    "'It works on my breadboard' — final words of every embedded engineer, ever.",
   ];
 
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -22,7 +27,7 @@ export default function handler(req, res) {
       "${randomQuote}"
     </text>
     <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" fill="#58a6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12">
-      — Daily Embedded Wisdom
+      — Daily Embedded
     </text>
   </svg>
   `;
@@ -34,3 +39,4 @@ export default function handler(req, res) {
   // Send the image
   res.status(200).send(svg);
 }
+// git add . git commit -m "Describe what you changed here"  git push origin main  
