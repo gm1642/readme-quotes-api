@@ -25,10 +25,6 @@ export default function handler(req, res) {
     <rect width="100%" height="100%" fill="#0d1117" rx="8" />
     <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-style="italic">
       "${randomQuote}"
-    </text>
-    <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" fill="#58a6ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12">
-      — Daily Embedded
-    </text>
   </svg>
   `;
 
